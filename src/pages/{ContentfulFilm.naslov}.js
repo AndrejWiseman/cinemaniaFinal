@@ -11,6 +11,7 @@ const FilmTemplate = ({data}) => {
 
     const {
         naslov,
+        originalniNaslov,
         vrstaFilma,
         godina,
         imdbOcena,
@@ -35,30 +36,18 @@ const FilmTemplate = ({data}) => {
                             alt={naslov}
                             className='about-img'
                         />
-                        <article className="recipe-info">
+                        <article className="recipe-info film-info">
                             <h2>{naslov}</h2>
-                            <p><SiImdb />{imdbOcena} | {godina}</p>
+                            <h5>{originalniNaslov}</h5>
+                            <p>{godina} | <SiImdb /> {imdbOcena}</p>
                             <p>{vrstaFilma}</p>
                             <p>{opisRadnje}</p>
 
-                            <a href={zanr}>Preuzmi</a>
+                            <a href={zanr} className="btn block">Preuzmi</a>
 
-                            <p></p>
                             <div className="recipe-icons">
 
                             </div>
-                            {/*tags*/}
-                            {/*<p className="recipe-tags">*/}
-                            {/*    Zanrovi:*/}
-                            {/*    {zanr.map((zan, index) => {*/}
-                            {/*        return (*/}
-                            {/*            <Link to={`/${zan}`} key={index}>*/}
-                            {/*                {zan}*/}
-                            {/*            </Link>*/}
-                            {/*        )*/}
-                            {/*})}*/}
-                            {/*</p>*/}
-
                         </article>
                     </section>
 
@@ -76,6 +65,7 @@ export const query = graphql`
   query ($naslov: String) {
     contentfulFilm(naslov: {eq: $naslov}) {
       naslov
+      originalniNaslov
       vrstaFilma
       godina
       imdbOcena

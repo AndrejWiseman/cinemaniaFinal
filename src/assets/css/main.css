@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400"); */
+
 *,
 ::after,
 ::before {
@@ -54,8 +54,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Inconsolata", monospace;
-  --bodyFont: "Montserrat", sans-serif;
+  --headingFont: "Lora", monospace;
+  --bodyFont: "Roboto", sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
@@ -83,6 +83,7 @@ html {
 
 body {
   background: var(--backgroundColor);
+  /*background: #1d1d1d;*/
   color: var(--textColor);
   font-family: var(--bodyFont);
   font-weight: 400;
@@ -566,6 +567,7 @@ form > *:last-child {
   gap: 2rem 1rem;
   padding-bottom: 3rem;
 }
+
 .tags-container {
   order: 1;
   display: flex;
@@ -624,11 +626,12 @@ form > *:last-child {
     gap: 1rem;
   }
   .recipes-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .recipe-img {
-    height: 9rem;
+    /*height: 9rem;*/
+    height: 100%;
   }
 
   .recipe p {
@@ -649,7 +652,7 @@ form > *:last-child {
     font-size: 1.15rem;
   }
   .recipes-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 /*#########*/
@@ -785,4 +788,25 @@ form > *:last-child {
   padding-bottom: 0.75rem;
   color: var(--primary-500);
   text-transform: capitalize;
+}
+
+
+.logo-slova {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--grey-800);
+}
+.logo-slova span {
+    color: var(--primary-500);
+}
+
+.p-god-ocena {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.imdb-icon {
+  color: darkorange;
+  font-size: 1.3rem;
 }

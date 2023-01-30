@@ -11,7 +11,8 @@ const Navbar = () => {
         <nav className='navbar'>
             <div className="nav-center">
                 <div className="nav-header">
-                    <Link to='/'><img src={logo} alt='logo'/></Link>
+                    {/*<Link to='/'><img src={logo} alt='logo'/></Link>*/}
+                    <Link to='/'  className='logo-slova'>cine<span>M</span>ani<span>A</span></Link>
                     <button className='nav-btn' onClick={() => setShow(!show)}>
                         <FiAlignJustify />
                     </button>

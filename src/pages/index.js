@@ -12,7 +12,7 @@ export default function Home() {
           <main className='page'>
               <header className='hero'>
                   <StaticImage
-                      src='../assets/images/main.jpeg'
+                      src='../assets/images/main-1.jpg'
                       alt='hero'
                       className='hero-img'
                       placeholder='blurred'

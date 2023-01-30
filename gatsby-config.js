@@ -50,11 +50,11 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Montserrat",
+              family: "Lora",
               variants: ["300", "400", "500"],
             },
             {
-              family: "Inconsolata",
+              family: "Roboto",
               variants: ["400", "500", "600", "700"],
             },
           ],

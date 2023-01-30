@@ -28,7 +28,7 @@ const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
                         </Link>
                     </article>
                     <StaticImage
-                        src='../assets/images/about.jpeg'
+                        src='../assets/images/main.jpg'
                         alt='about'
                         className='about-img'
                         placeholder='blurred'

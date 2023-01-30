@@ -499,14 +499,15 @@ form > *:last-child {
 }
 .about-img {
   border-radius: var(--borderRadius);
-  height: 500px;
+  /*height: 500px;*/
+  height: 100%;
 }
 
 @media screen and (min-width: 992px) {
   .about-page {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: 400px;
+    /*height: 400px;*/
   }
   .about-img {
     height: 100%;
@@ -632,6 +633,7 @@ form > *:last-child {
   .recipe-img {
     /*height: 9rem;*/
     height: 100%;
+    width: 100%;
   }
 
   .recipe p {
@@ -653,6 +655,7 @@ form > *:last-child {
   }
   .recipes-list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
   }
 }
 /*#########*/
@@ -791,6 +794,12 @@ form > *:last-child {
 }
 
 
+
+
+
+
+
+
 .logo-slova {
   font-size: 1.7rem;
   font-weight: 700;
@@ -809,4 +818,12 @@ form > *:last-child {
 .imdb-icon {
   color: darkorange;
   font-size: 1.3rem;
+}
+
+.pocetna-slika-film {
+  width: 100%;
+}
+
+h5.film-pocetni-naslov {
+  font-size: 0.9rem;
 }

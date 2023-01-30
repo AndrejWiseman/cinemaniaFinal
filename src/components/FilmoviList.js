@@ -16,8 +16,8 @@ const FilmoviList = ({ filmovi=[] }) => {
                     const slug = slugify(naslov, {lower:true})
                     return (
                         <Link key={id} to={`/${slug}`} className='recipe'>
-                            <GatsbyImage image={pathToImage} className='recipe-img' alt={naslov} />
-                            <h5>{naslov}</h5>
+                            <GatsbyImage image={pathToImage} className='recipe-img pocetna-slika-film' alt={naslov} />
+                            <h5 className="film-pocetni-naslov">{naslov}</h5>
                             <p className="p-god-ocena">{godina} | <FaImdb className="imdb-icon" /> {imdbOcena}</p>
                         </Link>
                     )

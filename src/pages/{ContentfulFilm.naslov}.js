@@ -34,7 +34,7 @@ const FilmTemplate = ({data}) => {
                         <GatsbyImage
                             image={pathToImage}
                             alt={naslov}
-                            className='about-img'
+                            className='about-img templ-slika'
                         />
                         <article className="recipe-info film-info">
                             <h2>{naslov}</h2>

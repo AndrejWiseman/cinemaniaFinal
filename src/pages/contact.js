@@ -72,7 +72,6 @@ export const query = graphql`
           linkPreuzimanje
           zanr
         }
-        zanr
         vrstaFilma
         slikaFilma {
           gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)

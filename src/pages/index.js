@@ -10,7 +10,7 @@ import {graphql} from "gatsby";
 
 const  Home = ({data}) => {
 
-    const filmovi = data.allContentfulFilm.nodes
+    // const filmovi = data.allContentfulFilm.nodes
 
   return (
       <Layout >
@@ -33,12 +33,12 @@ const  Home = ({data}) => {
                   </div>
               </header>
 
-              {/*<AllFilmovi />*/}
+              <AllFilmovi />
 
-              <section className="featured-recipes">
-                    <h5 className='novi-film-naslov'>Novi naslovi</h5>
-                    <FilmoviList filmovi={filmovi} />
-                </section>
+              {/*<section className="featured-recipes">*/}
+              {/*      <h5 className='novi-film-naslov'>Novi naslovi</h5>*/}
+              {/*      <FilmoviList filmovi={filmovi} />*/}
+              {/*  </section>*/}
 
           </main>
       </Layout >
@@ -46,31 +46,30 @@ const  Home = ({data}) => {
 
 }
 
-export const query = graphql`
-  query {
-    allContentfulFilm(filter: {noviFilm: {eq: true}}) {
-      nodes {
-        id
-        imdbOcena
-        godina
-        naslov
-        noviFilm
-        opisRadnje {
-          opisRadnje
-        }
-        originalniNaslov
-        tags {
-          linkPreuzimanje
-          zanr
-        }
-        zanr
-        vrstaFilma
-        slikaFilma {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allContentfulFilm(filter: {noviFilm: {eq: true}}) {
+//       nodes {
+//         id
+//         imdbOcena
+//         godina
+//         naslov
+//         opisRadnje {
+//           opisRadnje
+//         }
+//         originalniNaslov
+//         tags {
+//           linkPreuzimanje
+//           zanr
+//         }
+//         // zanr
+//         vrstaFilma
+//         slikaFilma {
+//           gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Home

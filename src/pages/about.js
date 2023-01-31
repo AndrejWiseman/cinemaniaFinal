@@ -34,41 +34,40 @@ const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
                         placeholder='blurred'
                     />
                 </section>
-                <section className="featured-recipes">
-                    <h5>Izabrano</h5>
-                    <FilmoviList filmovi={filmovi} />
-                </section>
+                {/*<section className="featured-recipes">*/}
+                {/*    <h5>Izabrano</h5>*/}
+                {/*    <FilmoviList filmovi={filmovi} />*/}
+                {/*</section>*/}
             </main>
         </Layout>
     )
 }
 
-export const query = graphql`
-  query {
-    allContentfulFilm(filter: {featured: {eq: true}}) {
-      nodes {
-        id
-        imdbOcena
-        godina
-        naslov
-        opisRadnje {
-          opisRadnje
-        }
-        originalniNaslov
-        tags {
-          linkPreuzimanje
-          zanr
-        }
-        zanr
-        linkZaPreuzimanje
-        noviFilm
-        vrstaFilma
-        slikaFilma {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allContentfulFilm(filter: {featured: {eq: true}}) {
+//       nodes {
+//         id
+//         imdbOcena
+//         godina
+//         naslov
+//         opisRadnje {
+//           opisRadnje
+//         }
+//         originalniNaslov
+//         tags {
+//           linkPreuzimanje
+//           zanr
+//         }
+//         // zanr
+//         // linkZaPreuzimanje
+//         vrstaFilma
+//         slikaFilma {
+//           gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default About

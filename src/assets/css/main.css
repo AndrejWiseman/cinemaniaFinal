@@ -60,7 +60,8 @@
   --extraSmallText: 0.7em;
   /* rest */
   --backgroundColor: var(--grey-0);
-  --textColor: var(--grey-1000);
+  /*--textColor: var(--grey-1000);*/
+  --textColor: var(--grey-500);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
@@ -82,8 +83,8 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
-  /*background: #1d1d1d;*/
+  /*background: var(--backgroundColor);*/
+  background: #1d1d1d;
   color: var(--textColor);
   font-family: var(--bodyFont);
   font-weight: 400;
@@ -380,7 +381,7 @@ form > *:last-child {
   text-align: center;
   font-size: 1.5rem;
   text-transform: capitalize;
-  color: var(--grey-1000);
+  color: var(--grey-800);
   letter-spacing: var(--letterSpacing);
   padding: 1rem 0;
   border-top: 1px solid var(--grey-500);
@@ -866,4 +867,8 @@ h5.film-pocetni-naslov {
 .novi-film-naslov {
   margin: 0;
   padding:0;
+}
+
+.preuzmi-dugme {
+  font-size: 0.7rem;
 }

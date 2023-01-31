@@ -3,7 +3,9 @@
 /*imdb #DBA506*/
 
 .slikaTemplate {
-    /*width: 100%;*/
+    width: 70%;
+    margin: 0 auto;
+
 }
 
 .templateHero {
@@ -12,6 +14,7 @@
     gap: 3rem;
     width: 80%;
     margin: 0 auto;
+    height: 60vh;
 }
 
 .filmNaziv h2 {
@@ -53,4 +56,25 @@ p.vrstaF {
     padding: 0;
     font-style: italic;
     font-size: 0.9rem;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .slikaTemplate {
+        height: 70%;
+        width: 100%;
+        margin: 0;
+    }
+    .templateHero {
+        gap: 1rem;
+        height: 40vh;
+    }
+    .filmNaziv h2 {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .filmNaziv h5 {
+        font-size: 0.7rem;
+    }
 }

@@ -46,7 +46,7 @@ const FilmTemplate = ({data}) => {
                                 <p className={filmTemplate.imdbIkona}><FaImdb className="imdb-icon" /> {imdbOcena}</p>
                             </div>
 
-                            <a href={linkZaPreuzimanje} className="btn block">Preuzmi film</a>
+                            <a href={linkZaPreuzimanje} className="btn block preuzmi-dugme">Preuzmi film</a>
 
                             <div className="recipe-icons">
 

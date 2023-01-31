@@ -1,14 +1,16 @@
 import React from 'react';
 import Layout from '../components/Layout'
 import { StaticImage} from "gatsby-plugin-image";
-import { Link, graphql } from 'gatsby'
-import FilmoviList from '../components/FilmoviList'
+// import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
+// import FilmoviList from '../components/FilmoviList'
 // import Filmovi from "./filmovi";
 import SEO from '../components/SEO'
 
 
 
-const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
+// const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
+const About = () => {
 
 
     return (

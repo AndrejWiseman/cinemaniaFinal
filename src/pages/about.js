@@ -1,17 +1,18 @@
 import React from 'react';
 import Layout from '../components/Layout'
 import { StaticImage} from "gatsby-plugin-image";
-// import { Link, graphql } from 'gatsby'
-import { Link } from 'gatsby'
-// import FilmoviList from '../components/FilmoviList'
+import { Link, graphql } from 'gatsby'
+// import { Link } from 'gatsby'
+import FilmoviList from '../components/FilmoviList'
 // import Filmovi from "./filmovi";
 import SEO from '../components/SEO'
 
 
 
 // const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
-const About = () => {
+const About = ({data}) => {
 
+    const filmovi = data.allContentfulFilm.nodes
 
     return (
         <Layout>
@@ -36,40 +37,39 @@ const About = () => {
                         placeholder='blurred'
                     />
                 </section>
-                {/*<section className="featured-recipes">*/}
-                {/*    <h5>Izabrano</h5>*/}
-                {/*    <FilmoviList filmovi={filmovi} />*/}
-                {/*</section>*/}
+
+                <section className="featured-recipes">
+                    <h5>Izabrano</h5>
+                    <FilmoviList filmovi={filmovi} />
+                </section>
             </main>
         </Layout>
     )
 }
 
-// export const query = graphql`
-//   query {
-//     allContentfulFilm(filter: {featured: {eq: true}}) {
-//       nodes {
-//         id
-//         imdbOcena
-//         godina
-//         naslov
-//         opisRadnje {
-//           opisRadnje
-//         }
-//         originalniNaslov
-//         tags {
-//           linkPreuzimanje
-//           zanr
-//         }
-//         // zanr
-//         // linkZaPreuzimanje
-//         vrstaFilma
-//         slikaFilma {
-//           gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    allContentfulFilm(filter: {featured: {eq: true}}) {
+      nodes {
+        id
+        imdbOcena
+        godina
+        naslov
+        opisRadnje {
+          opisRadnje
+        }
+        originalniNaslov
+        tags {
+          linkPreuzimanje
+          zanr
+        }
+        vrstaFilma
+        slikaFilma {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+      }
+    }
+  }
+`
 
 export default About

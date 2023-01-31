@@ -1,0 +1,52 @@
+
+
+.filmList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem 1rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+.filmLink {
+    color: #51545a;
+}
+
+.filmNaslov {
+    margin: 0;
+    padding:0;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.pGodOcena {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    margin: 0;
+    padding:0;
+    font-size: 0.7rem;
+}
+
+.imdbIcon {
+    /*color: darkgreen;*/
+    color: #DBA506;
+    font-size: 1.2rem;
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+    .filmList {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+    .filmNaslov {
+        font-size: 1rem;
+
+    }
+}
+
+
+

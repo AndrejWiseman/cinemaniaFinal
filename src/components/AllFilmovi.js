@@ -40,7 +40,6 @@ const AllFilmovi = () => {
     return (
         <section className='recipes-container'>
 
-
             <TagList filmovi={filmovi} />
             <FilmoviList filmovi={filmovi} />
         </section>

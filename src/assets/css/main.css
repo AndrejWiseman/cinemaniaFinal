@@ -862,3 +862,8 @@ h5.film-pocetni-naslov {
   font-size: smaller;
   font-style: italic;
 }
+
+.novi-film-naslov {
+  margin: 0;
+  padding:0;
+}

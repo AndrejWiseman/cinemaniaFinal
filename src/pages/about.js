@@ -24,7 +24,7 @@ const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
                         <p>Potrudićemo se da ispunimo sve zahteve pravim filmoljupcima!</p>
 
                         <Link to="/contact" className='btn'>
-                            Preporuka
+                            Preporuči
                         </Link>
                     </article>
                     <StaticImage
@@ -35,7 +35,7 @@ const About = ({data: {allContentfulFilm:{nodes:filmovi}}}) => {
                     />
                 </section>
                 <section className="featured-recipes">
-                    <h5>Pogledaj nove naslove</h5>
+                    <h5>Izabrano</h5>
                     <FilmoviList filmovi={filmovi} />
                 </section>
             </main>

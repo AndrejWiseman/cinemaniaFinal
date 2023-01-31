@@ -3,9 +3,15 @@ import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import AllFilmovi from '../components/AllFilmovi'
 import SEO from '../components/SEO'
+import FilmoviList from "../components/FilmoviList";
+import {graphql} from "gatsby";
 
+// export default function
 
-export default function Home() {
+const  Home = ({data}) => {
+
+    const filmovi = data.allContentfulFilm.nodes
+
   return (
       <Layout >
           <SEO title="Početna" />
@@ -27,9 +33,44 @@ export default function Home() {
                   </div>
               </header>
 
-              <AllFilmovi />
+              {/*<AllFilmovi />*/}
+
+              <section className="featured-recipes">
+                    <h5 className='novi-film-naslov'>Novi naslovi</h5>
+                    <FilmoviList filmovi={filmovi} />
+                </section>
 
           </main>
       </Layout >
   )
+
 }
+
+export const query = graphql`
+  query {
+    allContentfulFilm(filter: {noviFilm: {eq: true}}) {
+      nodes {
+        id
+        imdbOcena
+        godina
+        naslov
+        noviFilm
+        opisRadnje {
+          opisRadnje
+        }
+        originalniNaslov
+        tags {
+          linkPreuzimanje
+          zanr
+        }
+        zanr
+        vrstaFilma
+        slikaFilma {
+          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+        }
+      }
+    }
+  }
+`
+
+export default Home

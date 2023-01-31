@@ -45,7 +45,7 @@ const Contact = ({data}) => {
                 </section>
 
                 <section className="featured-recipes">
-                    <h5>Pogledaj nove naslove</h5>
+                    <h5>Izabrano</h5>
                     <FilmoviList filmovi={filmovi} />
                 </section>
 

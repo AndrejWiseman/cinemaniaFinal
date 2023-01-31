@@ -24,7 +24,7 @@ const Navbar = () => {
                     <Link to='/tags' className='nav-link' activeClassName='active-link' onClick={() => setShow(false)}>Žanrovi</Link>
                     <Link to='/about' className='nav-link' activeClassName='active-link' onClick={() => setShow(false)}>Stranica</Link>
                     <div className="nav-link contact-link">
-                        <Link to='/contact' onClick={() => setShow(false)}>Preporuka</Link>
+                        <Link to='/contact' onClick={() => setShow(false)}>Preporuči</Link>
                     </div>
                 </div>
             </div>

@@ -29,6 +29,7 @@ const  Home = ({data}) => {
                       <div className="hero-text">
                           <h1>CineManiA</h1>
                           <h4>Filmski klasici</h4>
+                          <p>Svi filmovi su sa prevodom.</p>
                       </div>
                   </div>
               </header>

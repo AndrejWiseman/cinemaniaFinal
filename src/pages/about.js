@@ -23,6 +23,7 @@ const About = ({data}) => {
                         <h2>O nama.</h2>
                         <p>Dobro došli na CineManiA!</p>
                         <p>Svi filmski klasici na jednom mestu.</p>
+                        <p>Svi filmovi su sa prevodom!</p>
                         <p>Svakim danom je naša filmska baza sve veća i veća.</p>
                         <p>Potrudićemo se da ispunimo sve zahteve pravim filmoljupcima!</p>
 

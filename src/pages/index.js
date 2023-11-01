@@ -18,7 +18,7 @@ const  Home = ({data}) => {
           <main className='page'>
               <header className='hero'>
                   <StaticImage
-                      src='../assets/images/main-1.jpg'
+                      src='../assets/images/main-3.jpg'
                       alt='hero'
                       className='hero-img'
                       placeholder='blurred'

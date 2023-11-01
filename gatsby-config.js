@@ -18,7 +18,9 @@ module.exports = {
   siteMetadata:{
     title: 'CineManiA',
     description: 'Filmski klasici na jednom mestu',
+    keywords: 'filmovi, klasici, preuzimanje, blockbuster, movies, domaci, prevod, prijevod',
     author: 'ByMe',
+    siteUrl: 'https://cinemania.vercel.app'
   },
 
   plugins: [
@@ -26,6 +28,47 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
+
+
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    //     options: {
+    //       query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             siteUrl
+    //           }
+    //         }
+    //         allSitePage {
+    //           node {
+    //             path
+              
+    //           }
+    //         }
+    //       }
+    //     `,
+
+    //     resolveSiteUrl: ({site}) => {
+    //       return site.siteMetadata.siteUrl
+    //     },
+
+
+    //     serialize: ({ site, allSitePage }) => 
+    //       allSitePage.nodes.map(node => {
+    //         return {
+    //           url: `${site.siteMetadata.siteUrl}${node.path}`,
+    //           changefreq: 'daily',
+    //           priority: 0.7,
+    //         }
+    //       })
+    //   },
+    // },
+
+
+
+
 
     {
       resolve: `gatsby-source-filesystem`,

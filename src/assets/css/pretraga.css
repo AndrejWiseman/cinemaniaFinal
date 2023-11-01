@@ -6,13 +6,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #d81f26;
+    border-bottom: 2px solid darkorange;
 
 }
 
-.boxPretraga input[type=text] {
+input[type=text] {
     background-color: #1d1d1d;
-    color: darkorange;
+    color: #ccc;
     border: none;
     /* border-bottom: 1px solid #d81f26; */
     padding: 5px;
@@ -26,17 +26,18 @@ input[type=text]:focus {
   }
 
 ::placeholder {
-    color: darkorange;
+    color: ccc;
     opacity: 0.5; /* Firefox */
   }
   
   ::-ms-input-placeholder { /* Edge 12-18 */
-    color: darkorange;
+    color: ccc;
   }
 
   .ikona {
     /* border: 1px solid red; */
     /* border-right: none; */
+    color: darkorange;
     
   }
 

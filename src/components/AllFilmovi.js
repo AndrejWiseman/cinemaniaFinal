@@ -9,6 +9,7 @@ import { BsSearch } from "react-icons/bs";
  const query = graphql`
   query {
     allContentfulFilm {
+      totalCount
       nodes {
         id
         imdbOcena

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import AllFilmovi from '../components/AllFilmovi'
@@ -10,8 +10,7 @@ import {graphql} from "gatsby";
 
 const  Home = ({data}) => {
 
-
-    const filmovi = data.allContentfulFilm.nodes
+  const filmovi = data.allContentfulFilm.nodes
 
   return (
       <Layout >
@@ -34,24 +33,23 @@ const  Home = ({data}) => {
                       </div>
                   </div>
               </header>
-
               
-
-
               <section className="featured-recipes">
+
+                {filmovi.length > 0 && (
+                  <>
                     <h5 className='novi-film-naslov'>Novi naslovi</h5>
                     <FilmoviList filmovi={filmovi} />
+                  </>
+                )}
 
-                    <h5 className='novi-film-naslov'>Svi filmovi</h5>
+                <h5 className='novi-film-naslov'>Svi filmovi</h5>
+                <AllFilmovi />
 
-                    <AllFilmovi />
-                    
-                </section>
-
+              </section>
           </main>
       </Layout >
   )
-
 }
 
 export const query = graphql`
@@ -78,5 +76,4 @@ export const query = graphql`
     }
   }
 `
-
 export default Home

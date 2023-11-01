@@ -1,0 +1,23 @@
+
+input[type=text] {
+    background-color: #1d1d1d;
+    color: darkorange;
+    margin-bottom: 2rem;
+    /* outline-color: pink; */
+    border: 1px solid #ccc;
+}
+
+input[type=text]:focus {
+    border: 1px solid darkorange;
+    outline: none;
+  }
+
+::placeholder {
+    color: darkorange;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: darkorange;
+  }
+

@@ -31,43 +31,18 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
 
-    // {
-    //   resolve: "gatsby-plugin-sitemap",
-    //     options: {
-    //       query: `
-    //       {
-    //         site {
-    //           siteMetadata {
-    //             siteUrl
-    //           }
-    //         }
-    //         allSitePage {
-    //           node {
-    //             path
-              
-    //           }
-    //         }
-    //       }
-    //     `,
-
-    //     resolveSiteUrl: ({site}) => {
-    //       return site.siteMetadata.siteUrl
-    //     },
 
 
-    //     serialize: ({ site, allSitePage }) => 
-    //       allSitePage.nodes.map(node => {
-    //         return {
-    //           url: `${site.siteMetadata.siteUrl}${node.path}`,
-    //           changefreq: 'daily',
-    //           priority: 0.7,
-    //         }
-    //       })
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://cinemania.vercel.app',
+        sitemap: 'https://cinemania.vercel.app/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
 
-
-
+   
 
 
     {
@@ -77,6 +52,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    
 
     {
       resolve: `gatsby-plugin-google-gtag`,

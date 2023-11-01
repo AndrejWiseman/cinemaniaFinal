@@ -1,14 +1,27 @@
 
-input[type=text] {
+
+.boxPretraga {
+    width: 330px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d81f26;
+
+}
+
+.boxPretraga input[type=text] {
     background-color: #1d1d1d;
     color: darkorange;
-    margin-bottom: 2rem;
-    /* outline-color: pink; */
-    border: 1px solid #ccc;
+    border: none;
+    /* border-bottom: 1px solid #d81f26; */
+    padding: 5px;
+    
 }
 
 input[type=text]:focus {
-    border: 1px solid darkorange;
+    /* border: 1px solid darkorange; */
+    border: none;
     outline: none;
   }
 
@@ -19,5 +32,11 @@ input[type=text]:focus {
   
   ::-ms-input-placeholder { /* Edge 12-18 */
     color: darkorange;
+  }
+
+  .ikona {
+    /* border: 1px solid red; */
+    /* border-right: none; */
+    
   }
 

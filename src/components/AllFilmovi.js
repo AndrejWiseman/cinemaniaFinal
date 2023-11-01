@@ -3,6 +3,7 @@ import TagList from './TagList'
 import FilmoviList from './FilmoviList'
 import { graphql, useStaticQuery } from 'gatsby'
 import '../assets/css/pretraga.css'
+import { BsSearch } from "react-icons/bs";
 
 
  const query = graphql`
@@ -55,15 +56,23 @@ const AllFilmovi = () => {
 
       <>
 
-        <input
-          className='pretraga'
-          id="searchbar"
-          type="text"
-          name="search"
-          placeholder="Pretraži film po Naslovu ili Originalnom naslovu"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className="boxPretraga">
+          
+          <BsSearch className='ikona' />
+          <input
+            className='pretraga'
+            id="searchbar"
+            type="text"
+            name="search"
+            placeholder="Pretraži film po Naslovu ili Originalnom naslovu"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            
+          />
+        
+          
+          
+        </div>
 
         <section className='recipes-container'>
 
